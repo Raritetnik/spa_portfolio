@@ -1,17 +1,26 @@
 import { Link } from 'react-router-dom'
 
-const _Navbar = () => {
+
+const Header = ({ onMenuClick }) => {
+
+    const creationMenu = () => {
+        return ([
+            ['Home', '#home', 'home'],
+            ['À propos', '#about', 'about'],
+            ['Projects', '#projects', 'projects'],
+            ['Contact', '#contact', 'contact'],
+        ].map(([title, url, scrollID]) => (
+            <a onClick={onMenuClick} data-scroll={scrollID} href={url} className="rounded-lg px-3 py-2 font-semibold hover:text-green-600">{title}</a>
+        )));
+    }
     return(
-        <header className="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between shadow mb-5 bg-body-tertiary">
-            <Link to='/' className="navbar-brand nav__menuTitle" >Mykhael.dev</Link>
-            <nav className='d-flex nav__menu'>
-                <Link to='/home' className="nav-link" >Home</Link>
-                <Link to='/home' className="nav-link" >About</Link>
-                <Link to='/home' className="nav-link" >Projects</Link>
-                <Link to='/home' className="nav-link" >Contact</Link>
+        <header className="flex mx-auto justify-between drop-shadow-lg fixed w-full text-lg bg-white py-4 px-5" style={{zIndex: 100}}>
+            <Link to='/' className="px-3 py-2 font-bold" >Raritetnik.DEV</Link>
+            <nav className="flex sm:justify-center space-x-4">
+            {creationMenu()}
             </nav>
         </header>
     );
 }
 
-export default _Navbar;
+export default Header;

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +9,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --color__title: #007D3F;
+  --color__hover: #007D3F;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.home__text h1 {
+  font-weight: bolder;
 }
 
 code {
@@ -23,18 +40,35 @@ header.navbar {
 }
 
 .nav__menuTitle {
-  font-weight: 600;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .nav__menu a:hover {
-  color: #007D3F;
+  color: var(--color__hover);
 }
 
 .home__text small a {
   margin-right: 20px;
 }
 
-.home__text p {
+p {
   color: gray;
+  font-size: 16px;
+}
+
+.block {
+  padding: 3rem 0;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+.block:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  color: var(--color__title);
+  font-weight: bold;
 }

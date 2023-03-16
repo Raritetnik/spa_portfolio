@@ -1,6 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
+import { useRef } from 'react';
 
 import Header from "./frontend/_Navbar";
 import Footer from "./frontend/_Footer";
@@ -9,22 +8,29 @@ import AboutPage from "./frontend/AboutPage";
 import ProjectsPage from "./frontend/ProjectsPage";
 import ContactPage from "./frontend/ContactPage";
 
-export default function App() {
+function App() {
+  const refer = useRef(null);
+  const ref = {
+    home: useRef(null),
+    about: useRef(null),
+    projects: useRef(null),
+    contact: useRef(null),
+  };
+
+  const handleClick = (e) => {
+    ref[e.target.dataset.scroll].current.scrollIntoView({behavior: 'smooth', block: 'start'});
+  };
+
   return (
       <div className="App">
-        <Header />
-        {/*<Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='/home' element={<HomePage/>}/>
-          <Route path='/about' element={<AboutPage/>}/>
-          <Route path='/projects' element={<ProjectsPage/>}/>
-          <Route path='/contact' element={<ContactPage/>}/>
-        </Routes>*/}
-        <HomePage/>
-        <AboutPage/>
-        <ProjectsPage/>
-        <ContactPage/>
+        <Header onMenuClick={handleClick}/>
+        <section ref={ref.home}><HomePage/></section>
+        <section ref={ref.about}><AboutPage/></section>
+        <section ref={ref.projects}><ProjectsPage /></section>
+        <section ref={ref.contact}><ContactPage/></section>
         <Footer/>
       </div>
   );
 };
+
+export default App;
