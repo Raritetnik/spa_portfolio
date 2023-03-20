@@ -1,14 +1,25 @@
 import { BsGithub } from 'react-icons/bs';
 import { FaShare } from 'react-icons/fa';
+
+
+
 const ProjectsPage = () => {
+    const fetchProjets = async () => {
+        const res = await fetch(`https://mk-json-server.vercel.app/projets`)
+        const data = await res.json()
+        return data;
+    }
+
     return(
         <div className="block">
             <div className="container md:mx-auto px-20">
                 <h2 className="text-green-600 text-2xl font-bold m-2 pb-5" >Projets Personnels</h2>
                 <div className='grid gap-10'>
-                    <CarteProjet titre="Panier des films" urlDemo='https://film-store.vercel.app/accueil' urlGit='https://github.com/Raritetnik/film-store'/>
-                    <CarteProjet titre="COINBASE" urlDemo='' urlGit='' />
-                    <CarteProjet titre="Base de Données École" urlDemo='' urlGit=''/>
+                    {fetchProjets.map( data => {
+                        return (
+                            <CarteProjet carteInfo={data} key={data.id}/>
+                        )
+                    })}
                 </div>
             </div>
         </div>
@@ -16,25 +27,25 @@ const ProjectsPage = () => {
 }
 
 
-const CarteProjet = ({titre, description}) => {
+const CarteProjet = (carteInfo) => {
     return (
         <div className="border-2 border-green-600 rounded-md lg:grid lg:grid-cols-5 lg:gap-2 p-10">
             <div className='flex justify-center col-span-3'>
-                <img src="https://cdn-icons-png.flaticon.com/512/1085/1085795.png"
+                <img src={carteInfo.urlImage}
                 style={{ maxHeight: 250, objectFit: 'cover', objectPosition: "50%"}}
                 class="card-img-left" alt="" />
             </div>
             <div className='col-span-2'>
                 <div class="card-body">
-                    <h5 class="card-title text-lg pb-3">{titre}</h5>
-                    <p class="card-text font-mono">A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars.</p>
-                    <button className={tagClass} disabled>React JS</button>
+                    <h5 class="card-title text-lg pb-3">{carteInfo.titre}</h5>
+                    <p class="card-text font-mono">{carteInfo.description}</p>
+                    {carteInfo.tags.map( (tag, i) => (<button className={tagClass} key={i} disabled>{tag}</button>) )}
                     <br className='mb-5'/>
-                    <a href={urlGit} className={btnClass}>GitHub<BsGithub
+                    <a href={carteInfo.urlGit} className={btnClass}>GitHub<BsGithub
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5' /></a>
-                    <a href={urlDemo} className={btnClass}>Live Demo<FaShare
+                    <a href={carteInfo.urlDemo} className={btnClass}>Live Demo<FaShare
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5'/></a>
