@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom'
 const Header = ({ onMenuClick }) => {
 
     const creationMenu = () => {
+        let i = 0;
         return ([
             ['Home', '#home', 'home'],
             ['À propos', '#about', 'about'],
             ['Projects', '#projects', 'projects'],
             ['Contact', '#contact', 'contact'],
         ].map(([title, url, scrollID]) => (
-            <a onClick={onMenuClick} data-scroll={scrollID} href={url} className="rounded-lg px-3 py-2 font-semibold hover:text-green-600">{title}</a>
+            <a onClick={onMenuClick} data-scroll={scrollID} href={url} key={i++} className="rounded-lg px-3 py-2 font-semibold hover:text-green-600">{title}</a>
         )));
     }
     return(

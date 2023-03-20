@@ -1,25 +1,30 @@
 import { BsGithub } from 'react-icons/bs';
 import { FaShare } from 'react-icons/fa';
-
+import { useState, useEffect } from 'react'
 
 
 const ProjectsPage = () => {
+    const [liste, setListe] = useState((<></>));
+
+    useEffect(()=>  {
+        const getProjects = async () => {
+            const data = await fetchProjets();
+            setListe(data.map((projet, i) => (<CarteProjet carteInfo={projet} key={i}/>)));
+        }
+        getProjects()
+    },[]);
+
     const fetchProjets = async () => {
         const res = await fetch(`https://mk-json-server.vercel.app/projets`)
         const data = await res.json()
         return data;
-    }
-
+    };
     return(
         <div className="block">
             <div className="container md:mx-auto px-20">
                 <h2 className="text-green-600 text-2xl font-bold m-2 pb-5" >Projets Personnels</h2>
                 <div className='grid gap-10'>
-                    {fetchProjets.map( data => {
-                        return (
-                            <CarteProjet carteInfo={data} key={data.id}/>
-                        )
-                    })}
+                    {liste}
                 </div>
             </div>
         </div>
@@ -27,7 +32,7 @@ const ProjectsPage = () => {
 }
 
 
-const CarteProjet = (carteInfo) => {
+const CarteProjet = ({carteInfo, key}) => {
     return (
         <div className="border-2 border-green-600 rounded-md lg:grid lg:grid-cols-5 lg:gap-2 p-10">
             <div className='flex justify-center col-span-3'>
@@ -39,7 +44,7 @@ const CarteProjet = (carteInfo) => {
                 <div class="card-body">
                     <h5 class="card-title text-lg pb-3">{carteInfo.titre}</h5>
                     <p class="card-text font-mono">{carteInfo.description}</p>
-                    {carteInfo.tags.map( (tag, i) => (<button className={tagClass} key={i} disabled>{tag}</button>) )}
+                    {(carteInfo.tags).map((tag, i) => (<button className={tagClass} key={i} disabled>{tag}</button>) )}
                     <br className='mb-5'/>
                     <a href={carteInfo.urlGit} className={btnClass}>GitHub<BsGithub
                     size={30}
