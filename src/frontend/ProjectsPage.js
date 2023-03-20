@@ -6,9 +6,9 @@ const ProjectsPage = () => {
             <div className="container md:mx-auto px-20">
                 <h2 className="text-green-600 text-2xl font-bold m-2 pb-5" >Projets Personnels</h2>
                 <div className='grid gap-10'>
-                    <CarteProjet titre="Location Voiture" />
-                    <CarteProjet titre="COINBASE" />
-                    <CarteProjet titre="Base de Données École" />
+                    <CarteProjet titre="Panier des films" urlDemo='https://film-store.vercel.app/accueil' urlGit='https://github.com/Raritetnik/film-store'/>
+                    <CarteProjet titre="COINBASE" urlDemo='' urlGit='' />
+                    <CarteProjet titre="Base de Données École" urlDemo='' urlGit=''/>
                 </div>
             </div>
         </div>
@@ -30,11 +30,11 @@ const CarteProjet = ({titre, description}) => {
                     <p class="card-text font-mono">A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars.</p>
                     <button className={tagClass} disabled>React JS</button>
                     <br className='mb-5'/>
-                    <a href="#" className={btnClass}>GitHub<BsGithub
+                    <a href={urlGit} className={btnClass}>GitHub<BsGithub
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5' /></a>
-                    <a href="#" className={btnClass}>Live Demo<FaShare
+                    <a href={urlDemo} className={btnClass}>Live Demo<FaShare
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5'/></a>
