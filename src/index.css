@@ -64,11 +64,11 @@ section {
   scroll-margin-top: 5rem;
 }
 
-.block:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
 .card-title {
   color: var(--color__title);
   font-weight: bold;
+}
+
+section:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.04);
 }

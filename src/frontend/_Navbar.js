@@ -15,7 +15,7 @@ const Header = ({ onMenuClick }) => {
     }
     return(
         <header className="flex mx-auto justify-between drop-shadow-lg fixed w-full text-lg bg-white py-4 px-5" style={{zIndex: 100}}>
-            <Link to='/' className="px-3 py-2 font-bold" >Raritetnik.DEV</Link>
+            <Link to='/' className="px-3 py-2 font-bold" >Raritetnik<span className='text-green-600'>.DEV</span></Link>
             <nav className="flex sm:justify-center space-x-4">
             {creationMenu()}
             </nav>

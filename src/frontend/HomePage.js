@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
     return(
         <section className="block">
-            <div className="container md:mx-auto px-20 flex justify-between items-center mt-10">
+            <div className="container mx-auto px-20 flex flex-col items-center mt-10 lg:flex-row lg:justify-between">
                 <div style={{ maxWidth: 400}} className='d-block'>
                     <h1 className="text-3xl font-black pb-4">Front-End et Back-End Développeur</h1>
                     <p className="text-gray-500 pb-4 font-mono">Bonjour, je m'appelle Mykhaylo Kuzmin et je suis concepteur et programmeur de sites web.

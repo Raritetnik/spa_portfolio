@@ -5,8 +5,8 @@ const ContactPage = () => {
         <div className="block">
             <div className="container md:mx-auto px-20">
                 <h2 className="text-green-600 text-2xl font-bold m-2 pb-5">Contactez-moi</h2>
-                <div className="grid grid-cols-3">
-                    <div className="col-4 flex">
+                <div className="lg:grid lg:grid-cols-3 flex-row">
+                    <div className="col-4 flex mb-4">
                         <BsPinMap
                         size={65}
                         className='border p-2 border-green-600 rounded-2xl'/>
@@ -15,7 +15,7 @@ const ContactPage = () => {
                             <p>Montréal, QC, Canada</p>
                         </div>
                     </div>
-                    <div className="col-4 flex">
+                    <div className="col-4 flex mb-4">
                     <BsMailbox
                         size={65}
                         className='border p-2 border-green-600 rounded-2xl'/>
@@ -24,7 +24,7 @@ const ContactPage = () => {
                             <p>mkodarenko@gmail.com</p>
                         </div>
                     </div>
-                    <div className="col-4 flex">
+                    <div className="col-4 flex mb-4">
                         <BsTelephone
                         size={65}
                         className='border p-2 border-green-600 rounded-2xl'/>

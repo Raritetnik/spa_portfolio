@@ -18,7 +18,7 @@ const ProjectsPage = () => {
 
 const CarteProjet = ({titre, description}) => {
     return (
-        <div className="border-2 rounded-3 grid grid-cols-5 gap-2 p-10">
+        <div className="border-2 border-green-600 rounded-md lg:grid lg:grid-cols-5 lg:gap-2 p-10">
             <div className='flex justify-center col-span-3'>
                 <img src="https://cdn-icons-png.flaticon.com/512/1085/1085795.png"
                 style={{ maxHeight: 250, objectFit: 'cover', objectPosition: "50%"}}
@@ -34,7 +34,7 @@ const CarteProjet = ({titre, description}) => {
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5' /></a>
-                    <a href="#" className={btnClass}>Live Demo <FaShare
+                    <a href="#" className={btnClass}>Live Demo<FaShare
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5'/></a>
