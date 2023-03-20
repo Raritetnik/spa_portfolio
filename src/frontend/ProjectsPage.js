@@ -42,7 +42,7 @@ const CarteProjet = ({carteInfo, key}) => {
             </div>
             <div className='col-span-2'>
                 <div class="card-body">
-                    <h5 class="card-title text-lg pb-3">{carteInfo.titre}</h5>
+                    <h5 class="card-title text-lg pb-3">{carteInfo.title}</h5>
                     <p class="card-text font-mono">{carteInfo.description}</p>
                     {(carteInfo.tags).map((tag, i) => (<button className={tagClass} key={i} disabled>{tag}</button>) )}
                     <br className='mb-5'/>
