@@ -21,12 +21,12 @@ const ProjectsPage = () => {
     };
     return(
         <div className="block">
-            <div className="container md:mx-auto px-20">
+            <header className="container md:mx-auto px-20">
                 <h2 className="text-green-600 text-2xl font-bold m-2 pb-5" >Projets Personnels</h2>
                 <div className='grid gap-10'>
                     {liste}
                 </div>
-            </div>
+            </header>
         </div>
     );
 }
@@ -34,13 +34,13 @@ const ProjectsPage = () => {
 
 const CarteProjet = ({carteInfo, key}) => {
     return (
-        <div className="border-2 border-green-600 rounded-md lg:grid lg:grid-cols-5 lg:gap-2 p-10">
-            <div className='flex justify-center col-span-3'>
+        <article className="border-2 border-green-600 rounded-md lg:grid lg:grid-cols-5 lg:gap-2 p-10">
+            <header className='flex justify-center col-span-3'>
                 <img src={carteInfo.urlImage}
                 style={{ maxHeight: 250, objectFit: 'cover', objectPosition: "50%"}}
                 class="card-img-left" alt="" />
-            </div>
-            <div className='col-span-2'>
+            </header>
+            <main className='col-span-2'>
                 <div class="card-body">
                     <h5 class="card-title text-lg pb-3">{carteInfo.title}</h5>
                     <p class="card-text font-mono">{carteInfo.description}</p>
@@ -55,8 +55,8 @@ const CarteProjet = ({carteInfo, key}) => {
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5'/></a>
                 </div>
-            </div>
-        </div>
+            </main>
+        </article>
     );
 }
 
