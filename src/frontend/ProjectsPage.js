@@ -60,7 +60,7 @@ const CarteProjet = ({carteInfo, key}) => {
     );
 }
 
-const btnClass = "bg-transparent hover:bg-green-600 text-green-600 font-bold hover:text-white py-2 px-4 border border-green-600 hover:border-transparent rounded mx-2"
+const btnClass = "bg-transparent hover:bg-green-600 text-green-600 font-bold hover:text-white py-2 px-4 border border-green-600 hover:border-transparent rounded m-2"
 
 const tagClass = "bg-transparent text-gray-700 font-semibold py-2 px-4 drop-shadow mx-2"
 export default ProjectsPage;
