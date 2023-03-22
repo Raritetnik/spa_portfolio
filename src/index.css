@@ -72,3 +72,22 @@ section {
 section:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.04);
 }
+
+@keyframes wave-block {
+  0% {
+    border-radius: 21% 79% 21% 79% / 50% 66% 34% 50% ;
+  }
+  25% {
+    border-radius: 58% 42% 55% 45% / 84% 52% 48% 16% ;
+  }
+  50% {
+    border-radius: 21% 79% 21% 79% / 75% 46% 54% 25% ;
+  }
+  74% {
+    border-radius: 25% 75% 21% 79% / 28% 31% 69% 72% ;
+  }
+
+  100% {
+    border-radius: 21% 79% 21% 79% / 50% 66% 34% 50% ;
+  }
+}
