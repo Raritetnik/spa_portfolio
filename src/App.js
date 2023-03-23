@@ -9,7 +9,6 @@ import ProjectsPage from "./frontend/ProjectsPage";
 import ContactPage from "./frontend/ContactPage";
 
 function App() {
-  const refer = useRef(null);
   const ref = {
     home: useRef(null),
     about: useRef(null),

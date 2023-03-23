@@ -91,3 +91,9 @@ section:nth-child(even) {
     border-radius: 21% 79% 21% 79% / 50% 66% 34% 50% ;
   }
 }
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+  }
+}
