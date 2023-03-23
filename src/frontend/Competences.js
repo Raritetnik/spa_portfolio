@@ -1,4 +1,4 @@
-import { FaReact, FaHtml5, FaCss3Alt, FaPhp, FaJava, FaNodeJs, FaBootstrap, FaWordpress, FaFigma } from 'react-icons/fa'
+import { FaReact, FaHtml5, FaCss3Alt, FaPhp, FaJava, FaNodeJs, FaBootstrap, FaWordpress, FaFigma, FaVuejs } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
 import { TbApi } from 'react-icons/tb'
 import { SiTailwindcss, SiNextdotjs, SiMysql, SiAdobe, SiMicrosoftoffice, SiCsharp } from 'react-icons/si'
@@ -13,6 +13,7 @@ export default function Competences() {
         [<FaNodeJs size={40} className='p-1 hover:text-white' />, 'Node JS'],
         [<FaReact size={40} className='p-1 hover:text-white' />, 'React JS'],
         [<SiNextdotjs size={40} className='p-1 hover:text-white' />, 'Next JS'],
+        [<FaVuejs size={40} className='p-1 hover:text-white' />, 'Vue JS'],
         [<FaPhp size={40} className='p-1 hover:text-white' />, 'PHP'],
         [<TbApi size={40} className='p-1 hover:text-white' />, 'RESTful API'],
         [<FaJava size={40} className='p-1 hover:text-white' />, 'Java'],
