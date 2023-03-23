@@ -17,6 +17,9 @@ const Header = ({onMenuClick}) => {
         'À propos', '#about', 'about'
       ],
       [
+        'Formation', '#formation', 'formation'
+      ],
+      [
         'Projects', '#projects', 'projects'
       ],
       ['Contact', '#contact', 'contact']
