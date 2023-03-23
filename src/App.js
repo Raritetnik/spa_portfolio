@@ -27,7 +27,7 @@ function App() {
       <div className="App">
         <Header onMenuClick={handleClick}/>
         <section ref={ref.home}><HomePage/></section>
-        <div ref={ref.home} className='block'><Competences /></div>
+        <div ref={ref.competence} className='block'><Competences /></div>
         <section ref={ref.about}><AboutPage/></section>
         <section ref={ref.formation}><Formation/></section>
         <section ref={ref.projects}><ProjectsPage /></section>
