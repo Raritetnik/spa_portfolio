@@ -3,8 +3,8 @@ import { BsTelephone} from 'react-icons/bs';
 const Formation = () => {
     return(
         <div className="block">
-            <main className='flex-col container lg:mx-auto px-20 flex lg:flex-row lg:justify-between md:text-center gap-5 items-center'>
-                <tbody className='w-full'>
+            <main className='flex-col container lg:mx-auto px-20 flex lg:flex-row lg:justify-between md:text-center gap-7 items-center'>
+                <tbody className='w-full lg:max-w-2xl'>
                     <header className="container md:mx-auto">
                         <h2 className="text-green-600 text-2xl font-bold m-2 text-left" >Formation</h2>
                     </header>
