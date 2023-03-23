@@ -55,7 +55,7 @@ const Header = ({onMenuClick}) => {
           style={{
           backgroundColor: 'white',
           minWidth: 150,
-          display: (toggle && isPortrait) ? 'none' : 'flex'
+          display: (isPortrait && !toggle) ? 'none' : 'flex'
         }}>
           {creationMenu()}
         </div>
