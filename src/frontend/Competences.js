@@ -1,7 +1,7 @@
-import { FaReact, FaHtml5, FaCss3Alt, FaPhp, FaJava, FaNodeJs, FaBootstrap, FaWordpress } from 'react-icons/fa'
+import { FaReact, FaHtml5, FaCss3Alt, FaPhp, FaJava, FaNodeJs, FaBootstrap, FaWordpress, FaFigma } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
 import { TbApi } from 'react-icons/tb'
-import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
+import { SiTailwindcss, SiNextdotjs, SiMysql, SiAdobe, SiMicrosoftoffice, SiCsharp } from 'react-icons/si'
 
 export default function Competences() {
     const icons = [
@@ -17,6 +17,11 @@ export default function Competences() {
         [<TbApi size={40} className='p-1 hover:text-white' />, 'RESTful API'],
         [<FaJava size={40} className='p-1 hover:text-white' />, 'Java'],
         [<FaWordpress size={40} className='p-1 hover:text-white' />, 'WordPress'],
+        [<FaFigma size={40} className='p-1 hover:text-white' />, 'Figma'],
+        [<SiAdobe size={40} className='p-1 hover:text-white' />, 'Adobe Products'],
+        [<SiMicrosoftoffice size={40} className='p-1 hover:text-white' />, 'Microsoft Office'],
+        [<SiMysql size={40} className='p-1 hover:text-white' />, 'MySQL'],
+        [<SiCsharp size={40} className='p-1 hover:text-white' />, 'С#'],
       ]
     const coin = (icon, i) => {
         return(
