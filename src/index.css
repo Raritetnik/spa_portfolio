@@ -73,6 +73,16 @@ section:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
+.info {
+  display: none;
+}
+.medaillon:hover .info {
+  display: block;
+}
+
+
+
+
 @keyframes wave-block {
   0% {
     border-radius: 21% 79% 21% 79% / 50% 66% 34% 50% ;

@@ -8,6 +8,7 @@ import AboutPage from "./frontend/AboutPage";
 import ProjectsPage from "./frontend/ProjectsPage";
 import ContactPage from "./frontend/ContactPage";
 import Formation from "./frontend/Formation";
+import Competences from "./frontend/Competences";
 
 function App() {
   const ref = {
@@ -26,6 +27,7 @@ function App() {
       <div className="App">
         <Header onMenuClick={handleClick}/>
         <section ref={ref.home}><HomePage/></section>
+        <div ref={ref.home} className='block'><Competences /></div>
         <section ref={ref.about}><AboutPage/></section>
         <section ref={ref.formation}><Formation/></section>
         <section ref={ref.projects}><ProjectsPage /></section>
