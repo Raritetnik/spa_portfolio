@@ -1,11 +1,39 @@
 import { BsTelephone, BsMailbox, BsPinMap } from 'react-icons/bs';
 
 const ContactPage = () => {
+
+    const saveMessage = (post) =>  {
+        console.log(post);
+        const fetchProjets = async () => {
+            const res = await fetch(`https://mk-json-server.vercel.app/messages`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify()
+            })
+            const data = await res.json()
+            return data;
+        };
+    }
+
     return(
         <div className="block">
             <div className="container md:mx-auto px-20">
-                <h2 className="text-green-600 text-2xl font-bold m-2 pb-5">Contactez-moi</h2>
-                <div className="lg:grid lg:grid-cols-3 flex-row">
+                <div className='w-full flex flex-col items-center'>
+                    <h2 className="text-green-600 text-2xl font-bold m-2 pb-5">Contactez-moi</h2>
+                    <form className='w-full lg:w-2/3 flex flex-col mb-8' onSubmit={saveMessage}>
+                        <div className='w-full flex mb-4 gap-x-4'>
+                            <input type="text" placeholder='Nom complet' className='w-full border-2 border-green-600 py-2 px-2 rounded-md'/>
+                            <input type="text" placeholder='Courriel ou Téléphone' className='w-full  border-2 border-green-600 py-2 px-2 rounded-md'/>
+                        </div>
+                        <input type="text" className='py-2 px-2 mb-4 border-2 border-green-600 rounded-md' placeholder='Sujet de contacte' />
+                        <textarea cols="30" rows="10" className='p-2 mb-4 border-2 border-green-600 rounded-md' placeholder='Votre message'></textarea>
+                        <input type="submit" value='Envoyer le message'
+                            className='px-4 py-2 mx-auto w-200 border-2 border-green-600 rounded-full hover:bg-green-600 hover:text-white'/>
+                    </form>
+                </div>
+                <div className="flex flex-col md:flex-row md:justify-between">
                     <div className="col-4 flex mb-4">
                         <BsPinMap
                         size={65}
