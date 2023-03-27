@@ -11,7 +11,7 @@ const AboutPage = () => {
                 <div className="about md:flex-col md:justify-center text-center max-w-none lg:max-w-md lg:text-left">
                     <h2 className="text-green-600 text-xl font-bold mb-3">À propos de moi</h2>
                     <h3 className="mb-3 font-bold text-xl">Concepteur et Programmeur de Sites WEB</h3>
-                    <p className="font-mono">En tant que développeur Front-End et Back-End junior, je possède un arsenal impressionnant de compétences en HTML, CSS, JavaScript, React, Next.JS, Node.JS, Bootstrap, Laravel, PHP, Java, RESTful API, Tailwind CSS et SCSS. J'excelle dans la conception et la maintenance de sites Web réactifs offrant une expérience utilisateur fluide. Mon expertise réside dans la création d'interfaces dynamiques et engageantes en écrivant un code propre et optimisé et en utilisant des outils et techniques de développement de pointe. Je fais évoluer mes compétences en concevant de petits projets et en explorant les nouvelles technologies liées à la conception de sites web.</p>
+                    <p className="font-mono">En tant que développeur Front-End et Back-End junior, je possède un arsenal impressionnant de compétences en programmation et conception. J'excelle dans la conception et la maintenance de sites Web réactifs offrant une expérience utilisateur fluide. Mon expertise réside dans la création d'interfaces dynamiques et engageantes en écrivant un code propre et optimisé et en utilisant des outils et techniques de développement de pointe. Je fais évoluer mes compétences en concevant de petits projets et en explorant les nouvelles technologies liées à la conception de sites web.</p>
                 </div>
             </div>
         </div>

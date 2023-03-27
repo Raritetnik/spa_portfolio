@@ -7,11 +7,14 @@ import HomePage from "./frontend/HomePage";
 import AboutPage from "./frontend/AboutPage";
 import ProjectsPage from "./frontend/ProjectsPage";
 import ContactPage from "./frontend/ContactPage";
+import Formation from "./frontend/Formation";
+import Competences from "./frontend/Competences";
 
 function App() {
   const ref = {
     home: useRef(null),
     about: useRef(null),
+    formation: useRef(null),
     projects: useRef(null),
     contact: useRef(null),
   };
@@ -24,7 +27,9 @@ function App() {
       <div className="App">
         <Header onMenuClick={handleClick}/>
         <section ref={ref.home}><HomePage/></section>
+        <div ref={ref.competence} className='block'><Competences /></div>
         <section ref={ref.about}><AboutPage/></section>
+        <section ref={ref.formation}><Formation/></section>
         <section ref={ref.projects}><ProjectsPage /></section>
         <section ref={ref.contact}><ContactPage/></section>
         <Footer/>
