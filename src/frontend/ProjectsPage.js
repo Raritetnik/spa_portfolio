@@ -9,16 +9,23 @@ const ProjectsPage = () => {
     useEffect(()=>  {
         const getProjects = async () => {
             const data = await fetchProjets();
-            setListe(data.map((projet, i) => (<CarteProjet carteInfo={projet} key={i}/>)));
+            showProjects(data);
         }
-        getProjects()
-    },[]);
+        getProjects();
+        console.log('Call twice');
+    }, []);
+
+    const showProjects = (data) => {
+        console.log(data);
+        setListe(data.map((projet, i) => (<CarteProjet carteInfo={projet} key={i}/>)));
+    }
 
     const fetchProjets = async () => {
         const res = await fetch(`https://mk-json-server.vercel.app/projets`)
         const data = await res.json()
         return data;
     };
+
     return(
         <div className="block">
             <header className="container md:mx-auto px-20">
@@ -32,18 +39,18 @@ const ProjectsPage = () => {
 }
 
 
-const CarteProjet = ({carteInfo, key}) => {
+const CarteProjet = ({carteInfo}) => {
     return (
         <article className="border-2 border-green-600 rounded-md lg:grid lg:grid-cols-5 lg:gap-2 p-10">
             <header className='flex justify-center col-span-3'>
                 <img src={carteInfo.urlImage}
                 style={{ maxHeight: 250, objectFit: 'cover', objectPosition: "50%"}}
-                class="card-img-left" alt="" />
+                className="card-img-left" alt="" />
             </header>
             <main className='col-span-2'>
-                <div class="card-body">
-                    <h5 class="card-title text-lg pb-3">{carteInfo.title}</h5>
-                    <p class="card-text font-mono">{carteInfo.description}</p>
+                <div className="">
+                    <h5 className="card-title text-lg pb-3">{carteInfo.title}</h5>
+                    <p className="card-text font-mono">{carteInfo.description}</p>
                     {(carteInfo.tags).map((tag, i) => (<button className={tagClass} key={i} disabled>{tag}</button>) )}
                     <br className='mb-5'/>
                     <a href={carteInfo.urlGit} className={btnClass}>GitHub<BsGithub
