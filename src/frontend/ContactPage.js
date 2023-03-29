@@ -26,7 +26,7 @@ const ContactPage = () => {
     return(
         <div className="block">
             <div className="container md:mx-auto px-20">
-                <div className='w-full none flex-col items-center'>
+                <div className='w-full hidden flex-col items-center'>
                     <h2 className="text-green-600 text-2xl font-bold m-2 pb-5">Contactez-moi</h2>
                     <form className='w-full lg:w-2/3 flex flex-col mb-8' onSubmit={saveMessage}>
                         <div className='w-full flex mb-4 gap-x-4'>
