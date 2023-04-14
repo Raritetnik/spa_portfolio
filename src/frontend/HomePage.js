@@ -30,14 +30,15 @@ const HomePage = () => {
                   }}/></Link>
               </small>
             </article>
-        <div className="mt-5">
+        <div className="mt-5 object-cover">
           {/*<img src="https://cdn-icons-png.flaticon.com/512/1995/1995515.png" style={{ width: 400, height: 400}}/>*/}
           <img
             src="./assets/profile_img_2.jpg"
-            className='animate-pulse'
+            className='animate-pulse object-cover'
             style={{
             width: 400,
             height: 400,
+            objectPosition: '50% 70%',
             animation: 'wave-block 5s linear infinite',
             border: '2px solid var(--color__title)'
           }} alt='Profile'/>
