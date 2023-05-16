@@ -53,11 +53,11 @@ const CarteProjet = ({carteInfo}) => {
                     <p className="card-text font-mono">{carteInfo.description}</p>
                     {(carteInfo.tags).map((tag, i) => (<button className={tagClass} key={i} disabled>{tag}</button>) )}
                     <br className='mb-5'/>
-                    <a href={carteInfo.urlGit} className={btnClass}>GitHub<BsGithub
+                    <a href={carteInfo.urlGit} target='_blank' className={btnClass}>GitHub<BsGithub
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5' /></a>
-                    <a href={carteInfo.urlDemo} className={btnClass}>Live Demo<FaShare
+                    <a href={carteInfo.urlDemo} target='_blank' className={btnClass}>Live Demo<FaShare
                     size={30}
                     style={{cursor: "pointer"}}
                     className='inline-block ml-2 p-0.5'/></a>
