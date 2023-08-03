@@ -12,9 +12,7 @@ const HomePage = () => {
               maxWidth: 400
               }} className='d-block relative'>
               <h1 className="text-3xl font-black pb-4">Front-End et Back-End Développeur</h1>
-              <p className="text-gray-500 pb-4 font-mono">Bonjour, je m'appelle Mykhaylo
-                Kuzmin et je suis concepteur et programmeur de sites web. Je suis d'origine
-                ukrainienne et j'habite actuellement à Montréal, au Canada.</p>
+              <p className="text-gray-500 pb-4 font-mono">Je m'appelle Mykhaylo Kuzmin, je suis concepteur et programmeur de sites web. Je suis originaire d'Ukraine et j'habite actuellement à Montréal, au Canada.</p>
               <small className='flex '>
                 <Link to='https://github.com/Raritetnik'><BsGithub
                   size={30}
