@@ -1,5 +1,3 @@
-import { BsTelephone} from 'react-icons/bs';
-
 const Formation = () => {
     return(
         <div className="block">
@@ -51,5 +49,4 @@ const Formation = () => {
         </div>
     );
 }
-
 export default Formation;
