@@ -30,7 +30,6 @@ function App() {
         <div ref={ref.competence} className='block'><Competences /></div>
         <section ref={ref.about}><AboutPage/></section>
         <section ref={ref.formation}><Formation/></section>
-        <section ref={ref.projects}><ProjectsPage /></section>
         <section ref={ref.contact}><ContactPage/></section>
         <Footer/>
       </div>
