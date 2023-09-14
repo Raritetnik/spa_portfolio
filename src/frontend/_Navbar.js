@@ -19,9 +19,6 @@ const Header = ({onMenuClick}) => {
       [
         'Formation', '#formation', 'formation'
       ],
-      [
-        'Projects', '#projects', 'projects'
-      ],
       ['Contact', '#contact', 'contact']
     ].map(([title, url, scrollID]) => (
       <a
@@ -32,7 +29,9 @@ const Header = ({onMenuClick}) => {
         className="px-3 py-2 font-semibold hover:text-green-600">{title}</a>
     )));
   }
-
+/*   [
+        'Projects', '#projects', 'projects'
+      ] */
   return (
     <header
       className="flex mx-auto justify-between drop-shadow-lg fixed w-full text-lg bg-white py-4 px-5"
