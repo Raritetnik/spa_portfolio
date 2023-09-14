@@ -8,6 +8,23 @@ const Experience = () => {
                     </header>
                     <div className='border-b-2 py-2 border-green-600'>
                         <div key="" className='w-full text-md font-bold text-left'>
+                            <span className='pl-7 inline-block w-56'>Club Cuisine BCBG</span>
+                            <span className='px-7 self-end'>Web Developpeur</span>
+                        </div>
+                        <div key="" className='w-full flex justify-between font-mono text-gray-600'>
+                            <span className='px-7'>Laval, QC</span>
+                            <span className='px-7'>2023</span>
+                        </div>
+                        <ul className="px-14 flex flex-col items-start text-left list-disc text-gray-800 text-sm">
+                            <li>Development and maintenance of Wordpress-based websites.</li>
+                            <li>Front-end & Back-end interface development.</li>
+                            <li>Close collaboration with designers teams.</li>
+                            <li>Performance optimization and quality testing.</li>
+                            <li>Close collaboration with client.</li>
+                        </ul>
+                    </div>
+                    <div className='border-b-2 py-2 border-green-600'>
+                        <div key="" className='w-full text-md font-bold text-left'>
                             <span className='pl-7 inline-block w-56'>Gofbee</span>
                             <span className='px-7 self-end'>Full-Stack Web Developpeur</span>
                         </div>
@@ -16,14 +33,13 @@ const Experience = () => {
                             <span className='px-7'>2023</span>
                         </div>
                         <ul className="px-14 flex flex-col items-start text-left list-disc text-gray-800 text-sm">
-                            <li>Développement Web Full Stack : Capacité à travailler à la fois sur le front-end (interface utilisateur) et le back-end (logique serveur) d'une application Web.</li>
-                            <li>Laravel : Excellente maîtrise du framework PHP Laravel, y compris la création et l'intégration de modèles, de contrôleurs, de migrations, d'authentification et de routage.</li>
-                            <li>Conception de bases de données : Compétences en conception et en gestion de bases de données relationnelles, avec une expérience spécifique dans l'utilisation de Laravel Eloquent ORM.</li>
-                            <li>HTML/CSS : Solides compétences en HTML et en CSS pour créer des interfaces Web attrayantes, responsives et conviviales.</li>
-                            <li>JavaScript : Maîtrise de JavaScript et des bibliothèques/frameworks comme Vue.js, Inertia JS et React pour améliorer l'expérience utilisateur.</li>
-                            <li>Conception adaptative (Responsive Design) : Capacité à créer des interfaces Web qui s'adaptent de manière fluide à différentes tailles d'écran et appareils.</li>
-                            <li>Conception et intégration de maquettes : Capacité à transformer des maquettes de conception Figma en interfaces Web fonctionnelles et esthétiques.</li>
-                            <li>Débogage et tests : Compétences dans le débogage de code, l'identification et la résolution des problèmes, ainsi que la réalisation de tests pour assurer la qualité du code.</li>
+                            <li>Development and maintenance of Laravel-based websites.</li>
+                            <li>Design and implementation of efficient and secure databases.</li>
+                            <li>Integration of external APIs for connectivity with providers.</li>
+                            <li>Creation of appealing and user-friendly mock-ups.</li>
+                            <li>Front-end interface development.</li>
+                            <li>Performance optimization and quality testing.</li>
+                            <li>Close collaboration with design and development teams.</li>
                         </ul>
                     </div>
                     <div className='border-b-2 py-2 border-green-600'>
